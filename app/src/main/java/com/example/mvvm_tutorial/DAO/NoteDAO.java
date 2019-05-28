@@ -32,7 +32,7 @@ public interface NoteDAO {
     @Query("SELECT * FROM note_table WHERE priority = :priority")
     LiveData<List<Note>> getNotesByPriority(int priority);
 
-    @Query("SELECT * FROM note_table ORDER BY priority DESC")
+    @Query("SELECT * FROM note_table ORDER BY title")
     LiveData<List<Note>> getAllNotes();
 
 }

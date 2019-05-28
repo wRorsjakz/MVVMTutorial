@@ -12,7 +12,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.example.mvvm_tutorial.DAO.NoteDAO;
 import com.example.mvvm_tutorial.Entity.Note;
 
-@Database(entities = {Note.class}, version = 1)
+@Database(entities = {Note.class}, version = 1, exportSchema = false)
 public abstract class NoteDatabase extends RoomDatabase {
 
     private static NoteDatabase instance;
@@ -53,6 +53,11 @@ public abstract class NoteDatabase extends RoomDatabase {
             noteDAO.insert(new Note("Title 3", "Description 3", 3));
             noteDAO.insert(new Note("Title 4", "Description 4", 1));
             noteDAO.insert(new Note("Title 5", "Description 5", 3));
+            noteDAO.insert(new Note("Title 6", "Description 6", 1));
+            noteDAO.insert(new Note("Title 7", "Description 7", 2));
+            noteDAO.insert(new Note("Title 8", "Description 8", 3));
+            noteDAO.insert(new Note("Title 9", "Description 9", 1));
+            noteDAO.insert(new Note("Title 10", "Description 10", 3));
             return null;
         }
     }
